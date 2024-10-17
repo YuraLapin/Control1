@@ -85,6 +85,21 @@
             a = a - b;
         }
 
+        public static bool CheckString(string inp)
+        {
+            var nums = "1234567890";
+
+            foreach (var c in inp)
+            {
+                if (!nums.Contains(c))
+                {
+                    throw new ArgumentException("Only numbers are allowed!");
+                }
+            }
+
+            return true;
+        }
+
         public static int Main()
         {
             return 0;
